@@ -83,7 +83,7 @@ demo/*.avi
 demo/*.mkv
 
 # ── Docker volumes / local data ───────────────────────────────────────────────
-data/
+
 logs/
 *.log
 
@@ -94,3 +94,9 @@ logs/
 .terraform/
 *.tfstate
 *.tfstate.backup
+
+__pycache__/
+*.pyc
+tmp_graph.html
+reports/
+.DS_Store
