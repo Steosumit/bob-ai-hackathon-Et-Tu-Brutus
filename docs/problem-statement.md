@@ -2,20 +2,21 @@
 
 ## Background
 
-[Describe the broader context. What domain or industry does this problem belong to? What situation creates the problem?]
+Cyber crime analyst face alert fatigue while manual investigating thousands of account transaction records to find mule or suspicious accounts.
 
 ## The Problem
 
-[State the problem clearly and specifically. Avoid vague statements like "things are slow" — instead say "Operations teams spend an average of 45 minutes per incident diagnosing pipeline failures because logs are scattered across 6 different tools."]
+Alert fatigue leads to delay in fraud identification within in the legal timeline which in turns creates backlogs of pending cases
 
 ## Who is Affected
 
-[Describe the specific user or persona experiencing this problem. Be concrete — not "developers" but "backend engineers managing CI/CD pipelines in enterprises with 50+ microservices."]
+- Cyber crime analyst solving cases in high pressure enviroments (Alert Fatigue)
+- Victims facing cyber frauds
 
 ## Why It Matters
 
-[What is the cost of this problem? Lost time? Revenue? Safety risk? Frustration? Quantify if possible.]
+It makes cyber crime analysis faster by narrowing the scope near target fraud actors
 
 ## Why Existing Solutions Fall Short
 
-[Briefly explain what people currently do and why it doesn't fully solve the problem. This sets up why your solution is needed.]
+Currently analyst either manually go through the records or use ML learning models to narrow down the scope
