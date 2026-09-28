@@ -1,11 +1,11 @@
-# 🚀 [UPI Fraud Trail Reconstruction Engine]
+#  UPI Fraud Trail Reconstruction Engine
 
 > Reconstructing multi-hop UPI money-laundering trails from bank statement
 > disclosures — and turning the reconstruction into a court-ready case file.
 
 ---
 
-## 👥 Team
+## Team
 
 | Field | Value |
 |---|---|
@@ -16,7 +16,7 @@
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Cyber crime analysts face alert fatigue while manually investigating thousands of
 account transaction records to find mule or suspicious accounts. Every alert has
@@ -30,7 +30,7 @@ cannot build a case.
 
 ---
 
-## 💡 Solution
+## Solution
 
 We built a graph-based forensic workbench that ingests real-format PhonePe/bank
 CSV statements, resolves counterparty names to accounts, and reconstructs the
@@ -48,7 +48,7 @@ of being accidentally perfect.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - **Realistic statement ingestion** — Parses PhonePe-style CSVs
   (`Date, Time, Transaction Details, Transaction ID, UTR, Transaction Type,
@@ -81,7 +81,7 @@ of being accidentally perfect.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |---|---|
@@ -94,7 +94,7 @@ of being accidentally perfect.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── src/                              # All source code
@@ -136,7 +136,7 @@ of being accidentally perfect.
 
 ---
 
-## ⚡ How to Run
+## How to Run
 
 > The committed `data/` files are the *outputs* of the pipeline. The two inputs it
 > needs — `data/statements/` and `data/forensic_network.gpickle` — are generated
@@ -188,18 +188,18 @@ python ring_crossref.py         # Louvain communities vs. true fraud-ring member
 
 ---
 
-## 🖥️ Demo
+## Demo
 
 | Artifact | Link |
 |---|---|
-| 📹 Demo Video | [Google Drive](https://drive.google.com/file/d/1_IPnM-4xinF0D1EXrcsyPP6nCfhVOgN5/view?usp=sharing) — see [`demo/demo-video-link.txt`](demo/demo-video-link.txt) |
-| 🌐 Live Demo | **Not deployed** — runs locally via the steps above (see [`demo/live-demo-url.txt`](demo/live-demo-url.txt)) |
-| 🖼️ Screenshots | [`demo/screenshots/`](demo/screenshots/) — landing, alert investigation, community map |
-| 📊 Presentation | [`presentation/`](presentation/) — ⚠️ deck not yet uploaded |
+|  Demo Video | [Google Drive](https://drive.google.com/file/d/1_IPnM-4xinF0D1EXrcsyPP6nCfhVOgN5/view?usp=sharing) — see [`demo/demo-video-link.txt`](demo/demo-video-link.txt) |
+|  Live Demo | **Not deployed** — runs locally via the steps above (see [`demo/live-demo-url.txt`](demo/live-demo-url.txt)) |
+|  Screenshots | [`demo/screenshots/`](demo/screenshots/) — landing, alert investigation, community map |
+|  Presentation | [`presentation/`](presentation/) — ⚠️ deck not yet uploaded |
 
 ---
 
-## 📊 Measured Results
+##  Measured Results
 
 All figures recomputed from the committed `data/*.csv` artifacts.
 
@@ -225,7 +225,7 @@ explicit low-confidence warnings rather than quietly dropped.
 
 ---
 
-## ⚠️ Known Limitations
+##  Known Limitations
 
 - **The dataset is synthetic.** We designed the fraud patterns *and* the detector,
   so absolute numbers are optimistic by construction. The hard negatives and
@@ -240,7 +240,7 @@ explicit low-confidence warnings rather than quietly dropped.
 
 ---
 
-## 🏅 What We're Most Proud Of
+##  What We're Most Proud Of
 
 **We built the test that could have embarrassed us, and it changed the answer.**
 
@@ -270,7 +270,7 @@ the kind of bug that destroys a case.
 
 ---
 
-## 🧭 Suggested Reading Order for Judges
+##  Suggested Reading Order for Judges
 
 1. **The adversarial tests** — `src/hard_negatives.py`, then
    `src/camouflage_retest.py`, then `data/ablation_results.csv`.
