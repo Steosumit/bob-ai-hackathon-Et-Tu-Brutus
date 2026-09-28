@@ -1,0 +1,28 @@
+# =============================================================================
+# UPI Fraud Trail Investigator — Python Dependencies
+# =============================================================================
+# Install with: pip install -r requirements.txt
+# Tested on Python 3.10 / 3.11 / 3.12
+# =============================================================================
+
+# --- Core Data Processing ---
+pandas>=2.0.0
+numpy>=1.24.0
+
+# --- Graph Analysis ---
+networkx>=3.0
+python-louvain>=0.16        # Louvain community detection (imports as 'community')
+
+# --- Dashboard & Visualization ---
+streamlit>=1.28.0
+pyvis>=0.3.2                # Interactive network graph rendering
+
+# --- Synthetic Data Generation ---
+faker>=18.0.0               # Realistic Indian-name account generation
+
+# --- Statistical Analysis ---
+scipy>=1.10.0               # Benford's Law chi-square tests
+
+# --- PDF Report Generation ---
+reportlab>=4.0.0            # Form 'A' evidence index & FIR case brief PDFs
+matplotlib>=3.7.0           # Investigative SOP flowchart diagrams
