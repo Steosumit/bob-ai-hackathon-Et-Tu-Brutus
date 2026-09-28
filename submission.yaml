@@ -12,20 +12,18 @@ team:
   name: "Et Tu Brutus!?"                             # REQUIRED — e.g., "Orion Squad"
   track: "CYBER FORENSICS"                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
   lead:
-    name: ""                           # REQUIRED — e.g., "Alice Chen"
-    email: ""                          # REQUIRED — e.g., "alice.chen@ibm.com"
+    name: "Atharva Karajgaonkar"                           # REQUIRED — e.g., "Alice Chen"
+    email: "karajgaonkaratharva@gmail.com"                          # REQUIRED — e.g., "alice.chen@ibm.com"
   members:
-    - name: ""                         # REQUIRED — Team member 1
-      email: ""
+    - name: "Chaitanya Subhash Chaganti"                         # REQUIRED — Team member 1
+      email: "chaitanyacyb3r@gmail.com"
     - name: "Sumit Gupta"                         # Add more members by copying the two lines above
       email: "steosumit@gmail.com"
-    - name: ""
-      email: ""
-    - name: ""
-      email: ""
+    - name: "Shreya Das "
+      email: "shreyadasofcl@gmail.com"
 
 submission:
-  title: ""                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
+  title: "Fraud Trail Investigation Dashboard"                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
 
   problem_statement: >                 # REQUIRED — 1-3 sentences. What problem? Who has it?
     Build a Bob-powered cyber cell investigation assistant that guides an officer through a structured deepfake analysis checklist (metadata inconsistencies, compression artifacts, facial landmark anomalies, audio-lip sync discrepancies). Bob documents findings, generates an evidence summary, maps the case to IT Act 2000 / BNS sections, and produces an internal investigation brief and a victim-facing reporting guide.
@@ -35,19 +33,20 @@ submission:
     and how it addresses the problem above.
 
   key_features:                        # REQUIRED — List 3 to 5 specific features you implemented
-    - ""                               # e.g., "Real-time pipeline anomaly detection using watsonx.ai"
-    - ""
-    - ""
-    - ""                               # optional 4th
-    - ""                               # optional 5th
+   
+     - "Forensic transaction graph keyed on UTR (nx.MultiDiGraph) — preserves all parallel transfers between the same account pair as individually citable edges, with 'quarantine-not-merge' entity resolution that flags duplicate holder names as AMBIGUOUS/UNKNOWN and structurally bars them from raising alerts (0 silent dict-overwrite merges)"
+     - "Adversarial hard-negative control set — 20 legitimate accounts built as structural twins of each fraud typology (freelancer fan-in, family bill-split with pass-through-like timing, small merchant), yielding 95.8% recall (46/48) at 0.0% false positives on adversarial accounts and 1.7% on normals (85.2% precision)"
+     - "Camouflage stress-testing that deliberately discards its own best features — injects realistic normal activity (8-member social circles, log-normal amounts) into mule accounts and reruns feature engineering, dropping avg_dwell_time (85.4%→16.7% recall), reciprocity (95.8%→66.7%) and clustering_coefficient (47.9%→18.8%) as generator artifacts; only 2 of 20 features survived into production"
+     - "Threshold-swept feature ablation with automatic failure-mode detection — all 18 features evaluated at 5 percentile thresholds (90 runs, no cherry-picking), auto-flagging any feature with >10% recall but ≥20% FP as a 'LAYERING FAILURE MODE'; separate unsupervised Louvain ring discovery isolated 7/7 multi-mule layering rings using zero labels"
+     - "UTR-exact court-admissible evidence export — parses evidence paths to index G.edges[u,v,utr] instead of the naive get_edge_data() that over-cites unrelated parallel transfers, rendering a Delhi High Court Form 'A' PDF with Section 63 BSA / Section 94 BNSS certification language, surfaced in a Streamlit investigator dashboard with evidence-highlighted ego graphs"
 
   tech_stack:
-    languages: []                      # REQUIRED — e.g., ["Python", "TypeScript"]
-    frameworks: []                     # e.g., ["FastAPI", "React"]
-    ibm_technologies: []               # e.g., ["watsonx.ai", "IBM Bob", "IBM Cloud Functions"]
+    languages: [Python]                      # REQUIRED — e.g., ["Python", "TypeScript"]
+    frameworks: ["Streamlit", "NetworkX", "pandas", "pyvis", "ReportLab", "python-louvain"]   # e.g., ["FastAPI", "React"]
+    ibm_technologies: ["IBM Bob"]               # e.g., ["watsonx.ai", "IBM Bob", "IBM Cloud Functions"]
     databases: []                      # e.g., ["PostgreSQL", "Redis"]
-    other: []                          # e.g., ["Docker", "GitHub Actions", "Slack API"]
-
+    other: ["Vis.js (via pyvis)", "SciPy", "Faker", "NumPy"]   # e.g., ["Docker", "GitHub Actions", "Slack API"]
+  
   what_we_are_most_proud_of: >         # Optional but recommended — guides judges to your best work
     Replace with what aspect of the submission you consider strongest
     and want judges to pay special attention to.
